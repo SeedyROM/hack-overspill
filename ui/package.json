@@ -5,7 +5,7 @@
   "private": true,
   "main": "src/index.js",
   "scripts": {
-    "dev": "poi",
+    "dev": "poi --no-clearConsole",
     "build": "poi build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
