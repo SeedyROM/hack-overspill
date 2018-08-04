@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h1>I work!</h1>
+    <router-view />
   </div>
 </template>
 
 <script>
   export default {
-      
+
   }
 </script>
 
