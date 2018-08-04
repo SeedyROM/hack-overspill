@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404
+from rest_framework.decorators import api_view
+from rest_framework.views import Response
 
-# Create your views here.
+from .models import Question
+from .serializers import QuestionSerializer
+
+
+@api_view(['GET'])
+def get_question(request, pk):
+  question = get_object_or_404(Question, pk=pk)
+  json = QuestionSerializer(question)
+
+  return Response(json.data)
